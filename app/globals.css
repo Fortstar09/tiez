@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* height: 100vh; */
+  /* background: url(/images/main-bg.svg) center / cover no-repeat; */
+  background-color:#02191D ;
+  font-family: "JejuMyeongjo", serif;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.ticket-bg{
+    background: url(/images/ticket-bg.svg) center / cover no-repeat;
+
+}
+
+.road{
+  font-family: "Road Rage", serif;
+}
+
+.roboto{
+  font-family: "Roboto", sans-serif;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
