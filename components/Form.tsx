@@ -8,6 +8,7 @@ const Form = () => {
     const [step, setStep] = useState(1);
 
     // Initialize ticketInfo object
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const ticketInfo = {
         name: "",
         email: "",
