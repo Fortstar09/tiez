@@ -63,7 +63,7 @@ const AttendeeDetails: React.FC<AttendeeDetailsProps> = ({ step, setStep }) => {
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col justify-center gap-8 px-6 pt-6 pb-12 rounded-3xl bg-[#052228] border border-[#07373F]">
                         <h2 className="text-white text-base roboto leading-normal">Upload Picture</h2>
-                        <div className="relative w-[508] h-[200px] bg-[#000000]/20">
+                        <div className="relative w-[508px] h-[200px] bg-[#000000]/20">
                             {uploadedFiles ? (
                                 <Image
                                 src={uploadedFiles}
