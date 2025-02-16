@@ -42,7 +42,7 @@ const AttendeeDetails: React.FC<AttendeeDetailsProps> = ({ step, setStep }) => {
             
             console.log(data);
             console.log(data.url);
-            
+
             const ticketInfo = JSON.parse(localStorage.getItem('ticketInfo') || '{}');
             ticketInfo.imgurl = data.url;
             localStorage.setItem('ticketInfo', JSON.stringify(ticketInfo));
@@ -77,7 +77,7 @@ const AttendeeDetails: React.FC<AttendeeDetailsProps> = ({ step, setStep }) => {
                                 <div {...getRootProps()} className={`${isDragActive ? "border-[#24A0B5]" : "border-[#24A0B5]/50"} absolute -bottom-5 right-32 flex flex-col items-center justify-center gap-4 px-6 py-[72px] border-4 bg-[#0E464F] rounded-[30px]`}>
                                     <input  {...getInputProps()} />
                                     <CloudDownload className="text-white" />
-                                    <p className="max-w-[192px] text-white text-center text-base roboto leading-normal">Drag & drop or click to upload</p>
+                                    <p className="w-[192px] text-white text-center text-base roboto leading-normal">Drag & drop or click to upload</p>
                                 </div>
                             )}
                         </div>
