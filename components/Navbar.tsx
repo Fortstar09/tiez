@@ -23,14 +23,14 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-50">
       <div className="bg-[#05252C]/40 rounded-[24px] border border-stroke px-[16px] py-3 mx-5 md:mx-14 lg:mx-[120px] my-4 backdrop-blur-md">
         <div className="flex justify-between items-center">
-          <Image src="/icons/logo.svg" width={100} height={100} alt="logo" />
+          <a href="#"><Image src="/icons/logo.svg" width={100} height={100} alt="logo" /></a>
           <ul className="hidden justify-center items-center gap-4 md:flex">
             {links.map((link) => (
               <li
                 key={link.name}
                 className="text-[18px] text-[#B3B3B3] p-[10px]"
               >
-                {link.name}
+                <a href="#">{link.name}</a>
               </li>
             ))}
           </ul>

@@ -8,7 +8,7 @@ const TicketTitle = () => {
           Techember Fest ”25
         </h1>
         <p className="text-center max-w-[340px] text-base leading-nomral text-grey font-normal roboto">
-          Join us for an unforgettable experience at [Event Name]! Secure your
+          Join us for an unforgettable experience at BintoMap! Secure your
           spot now.
         </p>
         <div className="flex gap-2 justify-center text-grey roboto leading-normal text-base items-center mb-[2px]">

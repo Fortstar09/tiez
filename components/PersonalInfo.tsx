@@ -18,10 +18,7 @@ import { Mail } from "lucide-react";
 const FormSchema = z.object({
   textarea: z
     .string()
-    .min(10, {
-      message: "special request must be at least 10 characters.",
-    })
-    .max(160, {
+    .max(20, {
       message: "special request must not be longer than 40 characters.",
     }),
   name: z.string().min(2, {
@@ -44,7 +41,6 @@ function onSubmit(data: z.infer<typeof FormSchema>) {
         const ticketInfo = JSON.parse(storedData);
         ticketInfo.name = data.name;
         ticketInfo.email = data.email;
-        ticketInfo.imgurl = "www.placeholder.com";
         ticketInfo.message = data.textarea;
         localStorage.setItem('ticketInfo', JSON.stringify(ticketInfo));
         setStep(3);

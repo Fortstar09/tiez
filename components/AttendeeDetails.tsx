@@ -14,10 +14,14 @@ interface AttendeeDetailsProps {
 
 const AttendeeDetails: React.FC<AttendeeDetailsProps> = ({ step, setStep }) => {
 
-    const [uploadedFiles, setUploadedFiles] = useState([]);
+    const [uploadedFiles, setUploadedFiles] = useState("");
+   
+    const onDrop = useCallback((acceptedFiles: File[]) => {        
+        console.log(uploadedFiles);
 
-    const onDrop = useCallback((acceptedFiles: File[]) => {
         const url = `https://api.cloudinary.com/v1_1/$dsns1khez/upload`;
+
+
     
         acceptedFiles.forEach(async (acceptedFile: File) => {
         //   const { signature, timestamp } = await getSignature();
@@ -35,9 +39,14 @@ const AttendeeDetails: React.FC<AttendeeDetailsProps> = ({ step, setStep }) => {
             body: formData,
           });
           const data = await response.json();
-            setUploadedFiles(data.url);
+            
             console.log(data);
             console.log(data.url);
+            
+            const ticketInfo = JSON.parse(localStorage.getItem('ticketInfo') || '{}');
+            ticketInfo.imgurl = data.url;
+            localStorage.setItem('ticketInfo', JSON.stringify(ticketInfo));
+            setUploadedFiles(data.url);
         });
       }, []);
     
@@ -56,21 +65,21 @@ const AttendeeDetails: React.FC<AttendeeDetailsProps> = ({ step, setStep }) => {
                         <h2 className="text-white text-base roboto leading-normal">Upload Picture</h2>
                         <div className="relative w-[508] h-[200px] bg-[#000000]/20">
                             {uploadedFiles ? (
-                                <div {...getRootProps()} className={`${ isDragActive ? "border-[#24A0B5]" : "border-[#24A0B5]/50"} absolute -bottom-5 right-32 flex flex-col items-center justify-center gap-4 px-6 py-[72px] border-4 bg-[#0E464F] rounded-[30px]`}>
-                                <input  {...getInputProps()}/>
-                                <CloudDownload className="text-white" />
-                                <p className="max-w-[192px] text-white text-center text-base roboto leading-normal">Drag & drop or click to upload</p>
-                            </div>
-                            ): (
                                 <Image
                                 src={uploadedFiles}
-                                        width={240}
-                                        height={240}
-                                        alt="avatar"
-                                        className={`border-[#24A0B5]/50 absolute -bottom-5 right-32 flex flex-col items-center justify-center gap-4 px-6 py-[72px] border-4 bg-[#0E464F] rounded-[30px]`} />
-                        
+                                width={240}
+                                height={240}
+                                alt="avatar"
+                                className={`border-[#24A0B5]/50 absolute -bottom-5 right-32 flex flex-col items-center justify-center gap-4 border-4 bg-[#0E464F] rounded-[30px]`} />
+                                
+                            ) : (
+                                    
+                                <div {...getRootProps()} className={`${isDragActive ? "border-[#24A0B5]" : "border-[#24A0B5]/50"} absolute -bottom-5 right-32 flex flex-col items-center justify-center gap-4 px-6 py-[72px] border-4 bg-[#0E464F] rounded-[30px]`}>
+                                    <input  {...getInputProps()} />
+                                    <CloudDownload className="text-white" />
+                                    <p className="max-w-[192px] text-white text-center text-base roboto leading-normal">Drag & drop or click to upload</p>
+                                </div>
                             )}
-                            
                         </div>
                     </div>
                     <div className="bg-[#0E464F] w-full h-1"></div>
