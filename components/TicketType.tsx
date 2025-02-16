@@ -34,7 +34,7 @@ const TicketType = ({selectedTicket, setSelectedTicket}: TicketTypeProps) => {
       {AvailableTickets.map((ticket) => (
         <div
           key={ticket.id}
-          className={`w-[158px] cursor-pointer flex flex-col items-start justify-between gap-3 p-3  rounded-xl ${
+          className={`w-[158px] cursor-pointer flex flex-col items-start hover:bg-[#2C545B] justify-between gap-3 p-3  rounded-xl ${
             selectedTicket === ticket.id
               ? "border-[#197686] border bg-[#12464E]"
               : "border-2 border-[#197686]"
