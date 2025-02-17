@@ -70,7 +70,7 @@ const AttendeeDetails: React.FC<AttendeeDetailsProps> = ({ step, setStep }) => {
                                 width={240}
                                 height={240}
                                 alt="avatar"
-                                className={`border-[#24A0B5]/50 absolute -bottom-5 right-32 flex flex-col items-center justify-center gap-4 border-4 bg-[#0E464F] rounded-[30px]`} />
+                                className={`border-[#24A0B5]/50 absolute -bottom-5 -right-[0.8] md:right-32 flex flex-col items-center justify-center gap-4 border-4 bg-[#0E464F] rounded-[30px]`} />
                                 
                             ) : (
                                     
