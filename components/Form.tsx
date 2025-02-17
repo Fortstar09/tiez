@@ -40,8 +40,8 @@ const Form = () => {
     };
 
     return (
-        <main className="flex justify-center items-center">
-            <div className="p-12 border-[#0E464F] border rounded-[40px]">
+        <main className="flex justify-center items-center px-5 md:px-0 pb-12">
+            <div className="p-6 md:p-12 bg-[#041E23] border-[#0E464F] border rounded-[32px] md:rounded-[40px]">
             <section>{renderStepComponent()}</section>
             </div>
         </main>

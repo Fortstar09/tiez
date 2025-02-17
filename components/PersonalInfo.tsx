@@ -127,7 +127,7 @@ function onSubmit(data: z.infer<typeof FormSchema>) {
             </FormItem>
           )}
         />
-<div className="flex justify-between gap-4 items-center">
+<div className="flex justify-between flex-col md:flex-row gap-4 items-center">
             <button
               className="py-3 bg-transparent border flex justify-center items-center w-full text-[#24A0B5] border-[#24A0B5] rounded-[8px] text-base leading-normal font-normal"
               onClick={() => setStep(1)}

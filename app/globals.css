@@ -8,7 +8,7 @@
 
 body {
   /* height: 100vh; */
-  /* background: url(/images/main-bg.svg) center / cover no-repeat; */
+  background: url(/images/main-bg.svg) center / cover no-repeat;
   background-color:#02191D ;
   font-family: "JejuMyeongjo", serif;
 }

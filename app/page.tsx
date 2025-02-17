@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="pt-[150px]">
+      <div className="pt-[120px] md:pt-[150px]">
         <Form />
       </div>
     </>

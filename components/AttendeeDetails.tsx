@@ -59,11 +59,11 @@ const AttendeeDetails: React.FC<AttendeeDetailsProps> = ({ step, setStep }) => {
     return (
         <div className="flex justify-between flex-col gap-8">
             <StepTitle step={step} />
-            <div className="p-6 border-1 border border-stroke rounded-[32px] w-full">
+            <div className="md:p-6 border-1 border-0 md:border border-stroke rounded-[32px] w-full">
                 <div className="flex flex-col gap-8">
-                    <div className="flex flex-col justify-center gap-8 px-6 pt-6 pb-12 rounded-3xl bg-[#052228] border border-[#07373F]">
-                        <h2 className="text-white text-base roboto leading-normal">Upload Picture</h2>
-                        <div className="relative w-[508px] h-[200px] bg-[#000000]/20">
+                    <div className="flex flex-col justify-center gap-8 px-6 pt-6 pb-12 rounded-3xl bg-[#052228] border                                                                                                                      border-[#07373F]">
+                        <h2 className="text-white text-base roboto leading-normal">Upload Profile Picture</h2>
+                        <div className="relative w-[247px] md:w-[508px] h-[200px] bg-[#000000]/20">
                             {uploadedFiles ? (
                                 <Image
                                 src={uploadedFiles}
@@ -74,7 +74,7 @@ const AttendeeDetails: React.FC<AttendeeDetailsProps> = ({ step, setStep }) => {
                                 
                             ) : (
                                     
-                                <div {...getRootProps()} className={`${isDragActive ? "border-[#24A0B5]" : "border-[#24A0B5]/50"} absolute -bottom-5 right-32 flex flex-col items-center justify-center gap-4 px-6 py-[72px] border-4 bg-[#0E464F] rounded-[30px]`}>
+                                <div {...getRootProps()} className={`${isDragActive ? "border-[#24A0B5]" : "border-[#24A0B5]/50"} absolute -bottom-5 -right-[0.8] md:right-32 flex flex-col items-center justify-center gap-4 px-6 py-[72px] border-4 bg-[#0E464F] rounded-[30px]`}>
                                     <input  {...getInputProps()} />
                                     <CloudDownload className="text-white" />
                                     <p className="w-[192px] text-white text-center text-base roboto leading-normal">Drag & drop or click to upload</p>

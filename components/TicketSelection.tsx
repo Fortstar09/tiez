@@ -41,7 +41,7 @@ const TicketSelection: React.FC<TicketSelectionProps> = ({ step, NextStep }) => 
   return (
     <div className="flex justify-between flex-col gap-8">
       <StepTitle step={step} />
-      <div className="p-6 border-1 border border-stroke rounded-[32px] w-full">
+      <div className="md:p-6 md:border md:border-stroke rounded-[32px] w-full">
         <div className="flex flex-col gap-8">
           <TicketTitle />
           <div className="bg-[#0E464F] w-full h-1"></div>
@@ -54,7 +54,7 @@ const TicketSelection: React.FC<TicketSelectionProps> = ({ step, NextStep }) => 
             setSelectedNum={setSelectedNum}
           />
 
-          <div className="flex justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <button
               className="py-3 bg-transparent border flex justify-center items-center w-full text-[#24A0B5] border-[#24A0B5] rounded-[8px] text-base leading-normal font-normal"
              onClick={handleBack}

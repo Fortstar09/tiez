@@ -8,7 +8,7 @@ const StepTitle = ({ step }: { step: number }) => {
   };
   return (
     <div className="justify-center items-start flex flex-col gap-3">
-      <div className="flex justify-between w-full">
+      <div className="flex flex-col gap-3 md:gap-0 md:flex-row  justify-between w-full">
         <h1 className="text-white text-[32px] font-normal">
         {getTitle()}
         </h1>

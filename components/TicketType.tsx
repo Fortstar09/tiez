@@ -30,11 +30,11 @@ const TicketType = ({selectedTicket, setSelectedTicket}: TicketTypeProps) => {
   return (
     <div className="flex flex-col gap-2">
     <h1 className="text-grey text-base roboto">Select Ticket Type:</h1>
-    <div className="flex items-start justify-center gap-[25px] border border-lightstroke p-4 rounded-3xl bg-[#052228]">
+    <div className="flex flex-col md:flex-row  items-start justify-center gap-[25px] border border-lightstroke p-4 rounded-3xl bg-[#052228]">
       {AvailableTickets.map((ticket) => (
         <div
           key={ticket.id}
-          className={`w-[158px] cursor-pointer flex flex-col items-start hover:bg-[#2C545B] justify-between gap-3 p-3  rounded-xl ${
+          className={` w-full md:w-[158px] cursor-pointer flex flex-col items-start hover:bg-[#2C545B] justify-between gap-3 p-3  rounded-xl ${
             selectedTicket === ticket.id
               ? "border-[#197686] border bg-[#12464E]"
               : "border-2 border-[#197686]"

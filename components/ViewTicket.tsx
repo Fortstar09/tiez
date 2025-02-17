@@ -32,22 +32,24 @@ const ViewTicket: React.FC<ViewTicketProps> = ({ step, setStep }) => {
 
 
   return (
-    <div className="flex justify-between flex-col gap-8">
+    <div className="flex justify-between items-center flex-col gap-8">
+      <div className="w-full">
       <StepTitle step={step} />
+      </div>
       <div className="flex flex-col roboto text-white gap-4 text-center">
         <h1 className="text-[32px] font-normal">Your Ticket is Booked!</h1>
         <p className="text-base">
           Check your email for a copy or you can download
         </p>
       </div>
-      <div className="flex justify-center items-center px-[152px] py-[32px]">
+      <div className="flex justify-center md:px-[152px] md:py-[32px]">
         <div className="relative">
           <Image
             src="/images/TICKET.svg"
-            width={0}
+            width={100}
             height={100}
             alt="ticket"
-            className="w-[300px] h-[600px] md:w-full md:h-full "
+            className="w-full md:w-[300px] h-[600px] md:h-full "
           />
           <div>
             <div className="absolute bottom-32 left-4 flex flex-col items-center justify-center p-[14px] gap-5 border border-[#24A0B5] rounded-2xl">
@@ -55,7 +57,7 @@ const ViewTicket: React.FC<ViewTicketProps> = ({ step, setStep }) => {
                 <h1 className="road text-[34px] text-center leading-none text-grey font-normal">
                   Techember Fest ”25
                 </h1>
-                <div className="flex flex-col gap-1 justify-center text-grey roboto leading-normal text-[10px] items-center mb-[2px]">
+                <div className="flex flex-col gap-1  justify-center text-grey roboto leading-normal text-[10px] items-center mb-[2px]">
                   <p>📍 04 Rumens road, Ikoyi, Lagos</p>
                   <p>March 15, 2025 | 7:00 PM</p>
                 </div>
@@ -100,7 +102,7 @@ const ViewTicket: React.FC<ViewTicketProps> = ({ step, setStep }) => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between gap-4 items-center">
+      <div className="flex flex-col md:flex-row justify-center w-full gap-4 ">
         <button
           className="py-3 bg-transparent border flex  justify-center items-center w-full text-[#24A0B5] border-[#24A0B5] rounded-[8px] text-base leading-normal font-normal"
           onClick={() => setStep(1)}
